@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أذكاري</title>
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --card: #ffffff;
+      --text: #1f2924;
+      --muted: #647069;
+      --accent: #1f6f54;
+      --accent-soft: #e6f2ed;
+      --border: #e5e0d5;
+      --shadow: 0 6px 20px rgba(20, 40, 30, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.9;
+      padding: 20px 14px 48px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: 1.45rem;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    header p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .main-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 6px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+    }
+
+    .main-tab {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      padding: 10px 8px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .main-tab.active {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .section-panel {
+      display: none;
+    }
+
+    .section-panel.active {
+      display: block;
+    }
+
+    .sub-heading {
+      font-size: 1rem;
+      color: var(--accent);
+      margin: 14px 0 8px;
+      font-weight: 700;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 12px;
+    }
+
+    .dhikr-text {
+      font-size: 1.08rem;
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>أذكاري</h1>
+      <p>قبل النوم، أذكار الصلاة، وأدعية متنوعة</p>
+    </header>
+
+    <nav class="main-tabs">
+      <button class="main-tab active" data-target="sec-sleep" type="button">قبل النوم</button>
+      <button class="main-tab" data-target="sec-prayer" type="button">أذكار الصلاة</button>
+      <button class="main-tab" data-target="sec-misc" type="button">أدعية متنوعة</button>
+    </nav>
+
+    <section id="sec-sleep" class="section-panel active">
+      <div class="card">
+        <p class="dhikr-text">اللهم إني أتبرأ من حولي وقوّتي وتدبيري إلى حولك وقوّتك وتدبيرك لا إله الا انت لا يعجزك شيء وأنت على كل شيء قدير</p>
+      </div>
+      <div class="card">
+        <p class="dhikr-text">رَبِّ أَعِنِّي وَلَا تعن عَلَيَّ، وَانْصُرْنِي وَلَا تَنْصُرْ عَلَيَّ، وَامْكُرْ لِي وَلَا تَمْكُرْ عَلَيَّ، وَاهْدِنِي وَيَسِّرِ الهُدَى إِلَيَ</p>
+      </div>
+      <div class="card">
+        <p class="dhikr-text">اللهم ايقظني على رزق لم أتوقعه وخير لم افكر فيه وعلى تحقيق أمنيات ضننت أنها مستحيلة وبشرني بما أنتظر يا خير المبشرين</p>
+      </div>
+      <div class="card">
+        <p class="dhikr-text">اللهم مالك الملك تؤتي الملك من تشاء وتنزع الملك ممن تشاء وتعز من تشاء وتذل من تشاء بيدك الخير إِنّك على كل شيء قدير،رحمٰن الدنيا والآخرة ورحيمهما،تعطيهما من تشاء،وتمنع منهما من تشاء،ارحمني رحمة تغنيني بها عمن سواك</p>
+      </div>
+    </section>
+
+    <section id="sec-prayer" class="section-panel">
+      <h2 class="sub-heading">بعد الوضوء</h2>
+      <div class="card">
+        <p class="dhikr-text">اللهم أغفر لي ذنبي ووسع لي في داري وبارك لي في رزقي</p>
+      </div>
+
+      <h2 class="sub-heading">قبل الصلاة</h2>
+      <div class="card">
+        <p class="dhikr-text">اللهم احسن وقوفي بين يديك وقربني إليك وردني إليك ردًا جميلًا وابعدني عن كل ماهو معصيةً لك</p>
+      </div>
+
+      <h2 class="sub-heading">عند الرفع من الركوع</h2>
+      <div class="card">
+        <p class="dhikr-text">ربنا ولك الحمد حمدًا كثيرًا طيبًا مباركًا فيه<br>ملء السماوات وملء الأرض وملء ما شئت من شيء بعد أهل الثناء والمجد أحق ما قال عبد وكلنا لك عبد. اللهم لا مانع لما أعطيت ولا معطي لما منعت ولا ينفع ذا الجد منك الجد</p>
+      </div>
+
+      <h2 class="sub-heading">قبل التسليم</h2>
+      <div class="card">
+        <p class="dhikr-text">«اللّهُمّ، اغْفِرْلِي مَا قَدّمْتُ، وَمَا أَخّرْتُ، وَمَا أَسْرَرْتُ، وَمَا أَعْلَنْتُ، وَمَا أَسْرَفْتُ، وَمَا أَنْتَ، أَعْلَمُ، بِهِ مِنِّي، أَنْتَ، الْمُقَدِّمُ، وَأَنْتَ، الْمُؤَخِّرُ، لَا إِلَهَ، إلّا أَنْتَ».</p>
+      </div>
+
+      <h2 class="sub-heading">بعد الصلاة</h2>
+      <div class="card">
+        <p class="dhikr-text">لا إلهَ إلاّ اللهُ وحدَهُ لا شريكَ لهُ، لهُ الملكُ ولهُ الحمدُ، وهوَ على كلِّ شيءٍ قديرٌ</p>
+      </div>
+      <div class="card">
+        <p class="dhikr-text">لا حولَ ولا قوةَ إلا باللهِ</p>
+      </div>
+      <div class="card">
+        <p class="dhikr-text">سبحانَ اللهِ، والحمدُ للهِ، ولا إلهَ إلا اللهُ، واللهُ أكبرُ</p>
+      </div>
+    </section>
+
+    <section id="sec-misc" class="section-panel">
+      <h2 class="sub-heading">دعاء الكرب</h2>
+      <div class="card">
+        <p class="dhikr-text">لا إله إلا الله العظيم الحليم، لا إله إلا الله رب العرش العظيم ، لا إله إلا الله رب السماوات ورب الأرض ورب العرش الكريم</p>
+      </div>
+
+      <h2 class="sub-heading">أدعية عامة</h2>
+      <div class="card">
+        <p class="dhikr-text">اللهم إني أسألك الثبات في الأمر والعزيمة على الرشد وأسألك موجبات رحمتك وعزائم مغفرتك وأسألك شكر نعمتك وحسن عبادتك وأسألك قلبًا سليمًا ولسانًا صادقًا وأسألك من خير ما تعلم واعوذ بك من شر ما تعلم وأستغفرك لما تعلم إنك انت علام الغيوب</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    var tabs = document.querySelectorAll(".main-tab");
+    var panels = document.querySelectorAll(".section-panel");
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].addEventListener("click", function () {
+        var targetId = this.getAttribute("data-target");
+        for (var j = 0; j < tabs.length; j++) {
+          tabs[j].classList.remove("active");
+        }
+        for (var k = 0; k < panels.length; k++) {
+          panels[k].classList.remove("active");
+        }
+        this.classList.add("active");
+        var activePanel = document.getElementById(targetId);
+        if (activePanel) {
+          activePanel.classList.add("active");
+        }
+      });
+    }
+  </script>
+</body>
+</html>
